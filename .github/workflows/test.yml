@@ -1,0 +1,14 @@
+name: test
+run-name: run by @${{ github.actor }}
+on: 
+    workflow_dispatch:
+jobs:
+    run_python:
+        runs-on: ubuntu-latest
+        name: Run Python
+        steps:
+            - uses: actions/checkout@v2
+            - name: pip install 
+              run: pip install eventlet
+            - name: run python
+              run: python src/main.py
