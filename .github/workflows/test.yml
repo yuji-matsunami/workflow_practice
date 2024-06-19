@@ -9,6 +9,6 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: pip install 
-              run: pip install eventlet
+              run: pip install eventlet==0.30.2
             - name: run python
               run: python src/main.py
